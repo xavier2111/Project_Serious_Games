@@ -1,10 +1,9 @@
 <?php
 
-
 	$servername = "localhost";
 	$username = "root";
-	$password = "root";
-	$dbname = "Project_Serious_Games";
+	$password = "";
+	$dbname = "project_serious_games";
 // connectie maken met PDO.
 
   $dsn = "mysql:host=$servername;dbname=$dbname;charset=utf8mb4";
@@ -17,6 +16,6 @@
     $conn = new PDO($dsn, $username, $password, $options);
   } catch (Exception $e) {
     error_log($e->getMessage());
-    exit('Something weird happened'); //something a user can understand
+    exit('Cannot get connection with database'); //something a user can understand
   }
 ?>

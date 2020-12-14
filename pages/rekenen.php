@@ -1,23 +1,21 @@
-<?php
-	session_start();
-	if($_SESSION['admin'] == false || !isset($_SESSION['admin']))
-	{
-		header("location: login.php");
-	}
-
-?>
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Project Serious Games</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Rekenen</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-		<style>
+	<style>
 		html{
 			height: 100%;
 		}
@@ -26,24 +24,26 @@
 			background: linear-gradient(0deg, rgba(90,123,146,1) 0%, rgba(0,12,97,1) 100%);
 		}
 	</style>
-	</head>
-	<body>
 
-	 <!-- Navigation -->
+</head>
+
+<body>
+
+  <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Project Serious Games</a>
+      <a class="navbar-brand" href="../pages/index.php">Project Serious Games</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="../pages/index.php">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="../pages/rekenen.php">Rekenen</a>
           </li>
           <li class="nav-item">
@@ -69,23 +69,42 @@
     <!-- Page Features -->
     <div class="row text-center">
 
-      <div class="col-lg-6 col-md-6 mb-4" onclick="location.href='../pages/rekenen.php';" style="cursor: pointer;">
+      <div class="col-lg-3 col-md-6 mb-4" style="cursor: pointer;">
         <div class="card h-100">
-        <img class="card-img-top" src="../img/plus.png" alt="">
+          <img class="card-img-top" src="../img/plus.png" alt="">
           <div class="card-body">
-            <h4 class="card-title">Rekenen</h4>
-            <p class="card-text">Klik hier om rekenspelletjes te doen.</p>
+            <h4 class="card-title">Plus sommen (+)</h4>
+            <p class="card-text">Maak hier opdrachten met plus(+) sommen.</p>
           </div>
-          
         </div>
       </div>
 
-      <div class="col-lg-6 col-md-6 mb-4" onclick="location.href='../pages/taal.php';" style="cursor: pointer;">
+      <div class="col-lg-3 col-md-6 mb-4" style="cursor: pointer;">
         <div class="card h-100">
-        <img class="card-img-top" src="../img/spelling.jpg" alt="">
+          <img class="card-img-top" src="../img/min.png" alt="">
           <div class="card-body">
-            <h4 class="card-title">Taal</h4>
-            <p class="card-text">Klik hier om taalspelletjes te doen.</p>
+            <h4 class="card-title">Min sommen (-)</h4>
+            <p class="card-text">Maak hier opdrachten met min(-) sommen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4" style="cursor: pointer;">
+        <div class="card h-100">
+          <img class="card-img-top" src="../img/keer.png" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Keer sommen(*)</h4>
+            <p class="card-text">Maak hier opdrachten met keer(*) sommen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 mb-4" style="cursor: pointer;">
+        <div class="card h-100">
+          <img class="card-img-top" src="../img/deel.png" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Deel sommen(/)</h4>
+            <p class="card-text">Maak hier opdrachten met deel(/) sommen.</p>
           </div>
         </div>
       </div>
@@ -109,4 +128,5 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
